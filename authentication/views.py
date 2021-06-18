@@ -33,6 +33,13 @@ class EmailValidationView(View):
         return JsonResponse({'email_valid': True})
 
 
+
+
+
+
+
+
+
 class UsernameValidationView(View):
     def post(self, request):
         data = json.loads(request.body)
@@ -60,6 +67,12 @@ class RegistrationView(View):
         context = {
             'fieldValues': request.POST
         }
+
+
+
+
+
+
 
         if not User.objects.filter(username=username).exists():
             if not User.objects.filter(email=email).exists():

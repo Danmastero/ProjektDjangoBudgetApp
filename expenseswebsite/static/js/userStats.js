@@ -5,6 +5,11 @@ const getHumanMonth = (m) => {
   return month;
 };
 
+
+
+
+
+
 const updateTopMonthsUI = (topMonth, type) => {
   if (type === "expenses") {
     document.querySelector(".expense-top-month").textContent = getHumanMonth(
@@ -48,6 +53,7 @@ const updateThisMonthUI = (data = [], type = "expenses") => {
     ).textContent = Object.values(currentMonthData)[0];
   }
 };
+
 
 const formatStats = (data = {}, type = "expenses") => {
   const monthData = data.months;
