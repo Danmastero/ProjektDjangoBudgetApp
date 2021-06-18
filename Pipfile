@@ -13,6 +13,9 @@ gunicorn = "*"
 validate-email = "*"
 six = "*"
 whitenoise = "*"
+heroku = "*"
+pip = "*"
+install = "*"
 
 [requires]
 python_version = "3.7"

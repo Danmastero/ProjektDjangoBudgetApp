@@ -14,7 +14,7 @@ from django.contrib import messages
 import os
 import django_heroku
 #Activate Django-Heroku
-django_heroku.setting(locals())
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,7 +27,8 @@ SECRET_KEY = ')l0nv5udi#-6w(kes8pb$e!sp(c!)_6ffg4n=_k5zf8c!^vrec'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://djangobudgetappproject.herokuapp.com']
+ALLOWED_HOSTS = ['https://djangobudgetappproject.herokuapp.com',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -130,7 +131,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') #For Heroku
 
-django_heroku.settings(locals())
+
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
